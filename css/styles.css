@@ -1,0 +1,36 @@
+.thumb img {
+  width: 200px;
+  height: 125px;
+}
+
+h2 {
+	text-align: center;
+}
+
+.sign {
+	left: 300px;
+	height: 300px;
+	width: 150px;
+}
+
+.getGeolocation {
+	width: 250px;
+	height: 50px;
+	border: solid black 1px;
+	background: #224499;
+	color: black;
+}
+
+body {
+	border: white solid 5px; 
+	background: #226699;
+}
+
+a {
+	width: 225px;
+	color: black;
+}
+
+ul {
+	font-size: 2em;
+}
