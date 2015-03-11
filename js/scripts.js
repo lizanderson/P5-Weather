@@ -32,7 +32,7 @@ var spokane = '99220';
       $('.temp').text(temp);
       $('.city').text(city);
       $('.state').text(state);
-      $('.thumb img').attr('src', thumb);
+      $('.rainy.png img').attr('src', thumb);
       
       // See console for _weather_ object
       console.log(weather);
