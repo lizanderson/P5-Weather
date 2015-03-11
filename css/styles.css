@@ -1,6 +1,6 @@
 .thumb img {
-  width: 125px;
-  height: 125px;
+  width: 175px;
+  height: 175px;
 }
 
 h1 {
@@ -26,8 +26,6 @@ body {
 a {
 	width: 225px;
 	color: black;
-	position: center;
-
 }
 
 ul {
