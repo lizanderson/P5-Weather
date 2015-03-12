@@ -18,6 +18,26 @@ var spokane = '99220';
     
     // Get _weather_ object
     success: function(weather) {
+
+      if (weather.code >= 30 && weather.code <= 34) {
+        $('.weatherIcon').addClass('clear')
+      };
+
+      if (weather.code >= 23 && weather.code <= 24) {
+        $('.weatherIcon').addClass('windy')
+      };
+
+      if (weather.code >= 11 && weather.code <= 12) {
+        $('.weatherIcon').addClass('rainy')
+      };
+
+      if (weather.code >= 19 && weather.code <= 22) {
+        $('.weatherIcon').addClass('fog')
+      };
+
+      if (weather.code >= 13 && weather.code <= 16) {
+        $('.weatherIcon').addClass('snow')
+      };
       
       // Get & store temperature
       var temp = weather.temp;
@@ -33,6 +53,10 @@ var spokane = '99220';
       $('.city').text(city);
       $('.state').text(state);
       $('.rainy.png img').attr('src', thumb);
+      $('.clear.png img').attr('src', thumb);
+      $('.windy.png img').attr('src', thumb);
+      $('.fog.png img').attr('src', thumb);
+      $('.snow.png img').attr('src', thumb);
       
       // See console for _weather_ object
       console.log(weather);
@@ -44,29 +68,6 @@ var spokane = '99220';
     }
   
   });
-
-
-
-
-if (navigator.geolocation) {
-    // Yes! Show button
-    $('.getGeolocation').show(); 
-  } else {
-    // No. Hide button
-    $('.getGeolocation').hide();
-  }
-
-// 2. Get Geolocation & return Simple Weather
-$('.getGeolocation').on('click', function() {
-  
-    navigator.geolocation.getCurrentPosition(function(position) {
-    //load weather using your lat/lng coordinates. See _loadWeather()_ below
-    loadWeather(position.coords.latitude+','+position.coords.longitude); 
-    // See latitute & longitude. Note, wait a few seconds
-    console.log(position.coords.latitude+','+position.coords.longitude);
-  });
-  
-});
 
 // 3. Wrap SimpleWeather in a function called _loadWeather()
 var loadWeather = function(location) {
@@ -96,13 +97,7 @@ var loadWeather = function(location) {
     
 };
 
-
-
-
-
-      
-      
-      // See console for _weather_ object
+   // See console for _weather_ object
       console.log(weather);
     },
   
