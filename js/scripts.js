@@ -19,7 +19,7 @@ var spokane = '99220';
     // Get _weather_ object
     success: function(weather) {
 
-      if (weather.code >= 30 && weather.code <= 34) {
+      if (weather.code >= 28 && weather.code <= 34) {
         $('.weatherIcon').addClass('clear')
       };
 

@@ -2,6 +2,7 @@
   width: 150px;
   height: 150px;
   background-image: url("../img/rainy.png") no-repeat;
+  z-index: 1;
 }
 
 .clear img {
@@ -15,18 +16,29 @@
   width: 150px;
   height: 150px;
   background-image: url("../img/fog.png") no-repeat;
+  z-index: 1;
 }
 
 .windy img {
   width: 150px;
   height: 150px;
   background-image: url("../img/windy.png") no-repeat;
+  z-index: 1;
 }
 
 .snow img {
   width: 150px;
   height: 150px;
   background-image: url("../img/snow.png") no-repeat;
+  z-index: 1;
+}
+
+.weatherIcon {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  border: black solid 1px;
+
 }
 
 body {
@@ -50,8 +62,10 @@ h1 {
 	background: rgba(255, 255, 255, .2)
 }
 
-a {
+.forecast {
 	width: 225px;
+  height: 30px;
+  margin-top: 175px;
 }
 
 ul {
